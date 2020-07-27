@@ -16,7 +16,7 @@ const LoginSchema = Yup.object().shape({
   email: Yup.string()
     .email("Invalid email address format")
     .required("Your Email is required to continue"),
-  phone: Yup.string()
+  phone_number: Yup.string()
     .max(14, "Incorrect Phone Number")
     .required("Your Phone Number is required to continue")
 });
@@ -37,16 +37,27 @@ class UserDetails extends Component{
 
 
         
-        const { email, phone, handleChange, handleSubmit } = this.props;
+        const { email, phone_number, handleChange, handleSubmit } = this.props;
         return(
               <div className= "leftClass">
                         <Formik
                         //onSubmit={this.continue} 
-                        initialValues={{ email: "", phone: "" }}
+                        initialValues={{ email: "", phone_number: "" }}
                         validationSchema={LoginSchema}
                         onSubmit={(values, { setSubmitting }) => {
+                            axios.post('https://jd-backend.herokuapp.com/api/v1/register', values, {
+                                headers: {
+                                    'Content-Type': 'application/json;charset=UTF-8'
+                                }
+                            })
+                                .then(response => {
+                                    console.log(response)
+                                })
+                                .catch(error => {
+                                    console.log(error.response)
+                                });
                             setTimeout(() => {
-                              console.log(JSON.stringify(values, null, 2));
+                              /* console.log(JSON.stringify(values, null, 2)); */
                               setSubmitting(true);
                             }, 400);
                             
@@ -79,15 +90,15 @@ class UserDetails extends Component{
                                 <div>
                                             <Field
                                                 //useRef = {register}
-                                                name="phone"
+                                                name="phone_number"
                                                 type="tel"
-                                                value={phone}
-                                                onChange={handleChange('phone')}
-                                                {...getFieldProps('phone')}
+                                                value={phone_number}
+                                                onChange={handleChange('phone_number')}
+                                                {...getFieldProps('phone_number')}
                                                 required
                                                 
                                             />
-                                            <label htmlFor="phone">Phone Number</label>
+                                            <label htmlFor="phone_number">Phone Number</label>
                                             {touched.phone && errors.phone ? <div className = "errorMessage">{errors.phone}</div> : null}
                                             
                                 </div>
