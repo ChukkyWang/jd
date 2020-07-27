@@ -1,0 +1,56 @@
+.Dashboard{
+    position: relative;
+    margin: 0 auto;
+    background-color: blue;
+    height: auto;
+    width: 100%;
+}
+
+
+.allDashBoard{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.productDetails, .productPay{
+    width: 100%;
+    height: 450px;
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .allDashBoard{
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .productDetails, .productPay{
+        width: 50%;
+    }
+
+}
+
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #f2f2f2;
+
+}
+
+.cover{
+    text-align: left;
+    margin: 15px;
+    line-height: 1.35;
+}
+
+.cover > h5{
+    line-height: 5.5;
+}
+
+

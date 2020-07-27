@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+header {
+  font-family: 'Quicksand', sans-serif;
+  color: #26a65b;
+  font-weight: 700;
+  margin: 0px;
+  height: 68px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+
+header > h1 {
+  padding: 16px;
+  margin: 0px;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+}
+
+@media only screen and (max-width: 768px) {
+  #root {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 auto;
+    top: 0;
+    left: 0%;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+    position: absolute;
+    width: 100%;
+    max-width: 850px;
+  }
+}
+
+.mainHome {
+  padding: 0px 35px;
+}
+
+.mainMainClass {
+  margin: 0 auto;
+  width: 100%;
+  height: 600px;
+}
+
+@media screen and (min-width: 768px) {
+  .mainMainClass .App {
+    place-items: center;
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+.mainClass, .mainMainClass {
+  font-family: 'Quicksand', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 850px;
+  place-items: center;
+  display: -ms-grid;
+  display: grid;
+}
+
+@media only screen and (min-width: 768px) {
+  .mainClass .mainMainClass {
+    place-items: center;
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+a {
+  color: #26a65b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main > h2, p {
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.750;
+}
+
+.MiL {
+  clear: both;
+  position: relative;
+  top: 12vh;
+}
+
+@media only screen and (min-width: 768px) {
+  .MiL {
+    top: 2vh;
+  }
+}
+
+.MiL h6 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Dashboard {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .Dashboard {
+    height: auto;
+  }
+}
+
+.allDashBoard {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0), 0px 0px 2px rgba(0, 0, 0, 0);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0), 0px 0px 2px rgba(0, 0, 0, 0);
+}
+
+.productDetails {
+  width: 100%;
+  height: 450px;
+}
+
+.FormProp {
+  width: 100%;
+  height: 450px;
+}
+
+@media only screen and (min-width: 768px) {
+  .allDashBoard {
+    width: 100%;
+    height: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 0px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 0px 2px rgba(0, 0, 0, 0.2);
+  }
+  .productDetails, .FormProp {
+    width: 50%;
+  }
+}
+
+.productName {
+  line-height: 1.15;
+  padding: 0px;
+  margin: 15px;
+  margin-left: 6%;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .productName {
+    margin: 15px;
+    margin-left: 6%;
+    margin-top: 15px;
+  }
+}
+
+.productName > .subnote {
+  font-size: 13.5px;
+}
+
+.productName > .signIn {
+  color: #0158ad;
+}
+
+.productName > .signIn, .subnote {
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.productName > p {
+  font-size: 12px;
+}
+
+.productName > h3 {
+  color: #0158ad;
+}
+
+.productName > p, h3 {
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.productDetails {
+  padding: 35px 0px 0px 0px;
+}
+
+.productDetails, .productPay {
+  width: 100%;
+  height: 400px;
+}
+
+@media only screen and (min-width: 768px) {
+  .allDashBoard {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .productDetails, .productPay {
+    width: 50%;
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #f2f2f2;
+}
+
+.cover {
+  text-align: left;
+  margin: 15px;
+  line-height: 1.35;
+}
+
+.cover > h5 {
+  line-height: 5.5;
+}
+
+form {
+  width: 88%;
+  padding: 15px 6% 2px 6%;
+  height: auto;
+  font-size: 13.5px;
+}
+
+@media only screen and (min-width: 768px) {
+  form {
+    width: 80%;
+  }
+}
+
+input {
+  padding: 5px;
+}
+
+.leftClass {
+  height: auto;
+  width: 100%;
+}
+
+.leftClass form div label {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  -webkit-transition: .33s all;
+  transition: .33s all;
+  pointer-events: none;
+  padding: 3px;
+  background-color: #ffffff;
+  color: black;
+  font-weight: 400;
+}
+
+.leftClass form div {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.leftClass form div input {
+  padding: 9px 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #0158ad;
+  border-radius: 3px;
+  font-size: 14.5px;
+}
+
+.leftClass input:valid ~ label {
+  top: -9px;
+  left: 10px;
+  color: #1AAA51;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/*.bodyLeft input:invalid ~ label {
+    top: 12px;
+    left: 0px;
+  }*/
+.leftClass input:focus ~ label {
+  top: -9px;
+  left: 10px;
+  color: #1AAA51;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+button {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  background-color: #0158ad;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.errorMessage {
+  font-size: 12px;
+  width: 80%;
+  color: red;
+  font-weight: 600;
+  text-align: left;
+  margin: 3px 0px 0px 0px;
+  -webkit-transition: 0.3s ease-in all;
+  transition: 0.3s ease-in all;
+}
+
+@media only screen and (min-width: 768px) {
+  .errorMessage {
+    width: 80%;
+    margin: 3px 0px;
+  }
+}
+
+.recover {
+  font-size: 13.5px;
+  text-align: center;
+  margin-top: 6.5px;
+}
+
+.verifyEmailClass {
+  padding: 10px 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .verifyEmailClass {
+    width: 80%;
+  }
+}
+
+.verifyEmailClass > p {
+  font-size: 14px;
+}
+
+.verifyEmailClass > div > input {
+  margin: 15px 0px;
+  padding: 9px 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #0158ad;
+  border-radius: 3px;
+  font-size: 14.5px;
+  text-align: center;
+}
+
+.FormProp {
+  display: none;
+  visibility: hidden;
+}
+
+.productPay {
+  height: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .FormProp, .productPay {
+    display: block;
+    visibility: visible;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    background-image: url(./image/welcome.jpg);
+    background-repeat: none;
+    background-size: cover;
+  }
+  .productPay {
+    height: 450px;
+  }
+}
+
+.userNames {
+  padding: 0px;
+  margin: 0px;
+}
+
+.firstName, .lastName {
+  padding: 0px;
+  margin: 0px;
+}
+
+.leftClass form .userNames .firstName .errorMessage {
+  padding: 0px;
+  margin: 0px;
+}
+
+.leftClass form .userNames .lastName .errorMessage {
+  padding: 0px;
+  margin: 0px;
+}
+
+.leftClass form .userNames div {
+  width: 100%;
+}
+
+.leftClass form .userNames div input {
+  padding: 9px 10px;
+  width: 90%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #0158ad;
+  border-radius: 3px;
+  font-size: 14.5px;
+}
+
+.leftClass form .userNames div input {
+  width: 100%;
+}
+
+.leftClass form .userNames {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .leftClass form .userNames div input {
+    padding: 9px 10px;
+    width: 98%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border: 1px solid #0158ad;
+    border-radius: 3px;
+    font-size: 14.5px;
+  }
+  .leftClass form .userNames {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+  }
+  .leftClass form .userNames div {
+    width: 50%;
+  }
+}
+
+.BVNinfo {
+  font-size: 9px;
+}
+
+::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+  color: transparent;
+}
+/*# sourceMappingURL=signIn.css.map */
