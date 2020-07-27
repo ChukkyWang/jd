@@ -44,7 +44,7 @@ class UserDetails extends Component{
                         //onSubmit={this.continue} 
                         initialValues={{ email: "", phone: "" }}
                         validationSchema={LoginSchema}
-                        onSubmit={(values, { setSubmitting, isValidating }) => {
+                        onSubmit={(values, { setSubmitting }) => {
                             setTimeout(() => {
                               console.log(JSON.stringify(values, null, 2));
                               setSubmitting(true);
@@ -56,7 +56,7 @@ class UserDetails extends Component{
               
                         
                         >
-                                {({ touched, errors, getFieldProps, isSubmitting, validateForm}) => (<Form onSubmit={handleSubmit}>
+                                {({ touched, errors, getFieldProps, isSubmitting, validateForm}) => (<Form>
                                         
                                 <div>   
                                         <Field
