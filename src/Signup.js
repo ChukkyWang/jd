@@ -10,9 +10,9 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function SignUpForm() {
   return (
-    <div className="Dashboard">
-        <section>
-          <div className="allDashBoard">
+          <div className="Dashboard">
+          <section>
+            <div className="allDashBoard">
 
               <div className="productDetails">
                 <div className="productName">
