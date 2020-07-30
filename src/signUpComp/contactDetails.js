@@ -3,6 +3,7 @@ import axios from "axios";
 //import ReactDOM from "react-dom";
 import { Formik, Form, Field, useFormik, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import verifyEmail from "./verifyEmail"
 //import { Link } from 'react-router-dom';
 //import { queryByDisplayValue } from "@testing-library/react";
 //import { useForm } from 'react-hook-form';
@@ -37,7 +38,7 @@ class UserDetails extends Component{
 
 
         
-        const { email, phone_number, handleChange, handleSubmit } = this.props;
+        const { email, phone_number, handleChange } = this.props;
         return(
               <div className= "leftClass">
                         <Formik
@@ -58,18 +59,20 @@ class UserDetails extends Component{
                                 });
                             setTimeout(() => {
                               /* console.log(JSON.stringify(values, null, 2)); */
+                              //window.location.href=('Signup/verifyEmail');
                               setSubmitting(true);
-                            }, 400);
-                            
-                        } 
+                            }, 1000);                         
+                        }
             
                       }
-              
+                       
                         
                         >
-                                {({ touched, errors, getFieldProps, isSubmitting, validateForm}) => (<Form>
+                                {({ error, response, touched, errors, getFieldProps, isSubmitting, handleChange, validateForm}) => (<Form>
                                         
-                                <div>   
+                                <div> 
+                                
+                                <p>{response.data.message}</p>
                                         <Field
                                             
                                             name="email"
@@ -77,8 +80,6 @@ class UserDetails extends Component{
                                             value={email}
                                             onChange={handleChange('email')}
                                             {...getFieldProps('email')}
-                                            
-                                          
                                             required
                                         />
                                         <label htmlFor="email">Email</label>
@@ -99,7 +100,7 @@ class UserDetails extends Component{
                                                 
                                             />
                                             <label htmlFor="phone_number">Phone Number</label>
-                                            {touched.phone && errors.phone ? <div className = "errorMessage">{errors.phone}</div> : null}
+                                            {touched.phone_number && errors.phone_number ? <div className = "errorMessage">{errors.phone_number}</div> : null}
                                             
                                 </div>
                                 <button type="submit" className="Next" disabled={isSubmitting}>

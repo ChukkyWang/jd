@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 class VerifyEmail extends Component {
-    continue = e => {
-        e.preventDefault();
-        this.props.nextStep();
-    }
+    //continue = e => {
+        //e.preventDefault();
+        //this.props.nextStep();
+    //}
 
     
     //back = e => {
@@ -22,6 +22,7 @@ class VerifyEmail extends Component {
                         name="verify"
                         type="text"
                         placeholder = "Verification Code"
+                        //onChange={handleChange('email')}
                         //{...formik.getFieldProps('phone')}
                         required
                     />
@@ -29,7 +30,7 @@ class VerifyEmail extends Component {
 
                 
 
-                <button className="Back" onClick={this.continue}>
+                <button className="Back" onClick={window.location.href=('/BVNPage')}>
                     Verify Email
                 </button>
             </div>

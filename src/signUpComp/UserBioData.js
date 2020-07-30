@@ -12,13 +12,13 @@ import { queryByDisplayValue } from "@testing-library/react";
 //import * as EmailValidator from "email-validator";
 //import * as Yup from "yup";
 const UserBioDataSchema = Yup.object().shape({
-  firstName: Yup.string()
+  /*firstName: Yup.string()
     .min(2, "First Name should be two alphabets or more")
     .required("Required"),
 
   lastName: Yup.string()
     .min(2, "Last Name should be two alphabets or more")
-    .required("Required"),
+  .required("Required"),*/
 
 
   //DoB: Yup.string().date.min(01-01-2002, "You must be 18 years to proceed").required("Date of Birth is Required"),
@@ -50,6 +50,7 @@ class UserBioData extends Component{
         const { email, phone, check, firstName, lastName, DoB, BVNumber, handleChange} = this.props;
         return(
               <div className= "leftClass">
+                        <p></p>
                         <Formik
                         onSubmit={this.continue} 
                         initialValues={{}}
@@ -67,9 +68,9 @@ class UserBioData extends Component{
 
                           
                         >
-                                {({ touched, errors, getFieldProps, isSubmitting, }) => (<Form props={this.props}>
+                                {({ touched, errors, getFieldProps, isSubmitting, handleChange }) => (<Form props={this.props}>
                                         
-                                <div className="userNames">
+                                {/*<div className="userNames">
                                     <div className="firstName">   
                                         <Field
                                             //useRef = {register}
@@ -118,7 +119,7 @@ class UserBioData extends Component{
                                     <p className="BVNinfo">Please ensure the birth date provided is same as what's captured at your bank. This is required for verification.</p>
                                     
                                 </div>
-
+                                */}
                                 <div>
                                             <Field
                                                 //useRef = {register}

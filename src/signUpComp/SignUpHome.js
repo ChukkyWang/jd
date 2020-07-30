@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import UserDetails from './contactDetails';
 import VerifyEmail from './verifyEmail';
-import UserBioData from './UserBioData'
+import UserBioData from './UserBioData';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 //import { useFormik } from 'formik';
 //import { Link } from 'react-router-dom';
 //import './signInComp/signIn.css';
@@ -99,7 +100,7 @@ class CreateForm extends Component{
         return(
             <div>
                 {this.showStep()}
-        {/*<h5>Step {step} of 3</h5>*/}
+                {/*<h5>Step {step} of 3</h5>*/}
             </div>
         );
     }
